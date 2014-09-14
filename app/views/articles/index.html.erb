@@ -1,4 +1,7 @@
 <% @articles.each { |x| %>
-<p><%= x.title %></p>
-<p><%= x.text %></p>
+	<article>
+		<p><strong><%= x.title %></strong>  <em>(posted <%= x.created_at.strftime("%A, %B %d, %Y") %>)</em></p>
+		<p><em>By <%= x.user.name %></em><p>
+		<p><%= x.text %></p>
+	</article>
 <% } %>

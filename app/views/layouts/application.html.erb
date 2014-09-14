@@ -7,12 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<% if notice %>
 	<p class="notice"><%= notice %></p>
+	<% end %>
+	<% if alert %>
     <p class="alert"><%= alert %></p>
+    <% end %>
 	<div id="masthead">
 		<div id="paper_name">
 			<p><h1>Twin Falls Gazette</h1></p>
-			<p><h2>Covering Twin Falls and the Grey Mountains</h2></p>
+			<p><h3>Serving Twin Falls and the Grey Mountains</h3></p>
+		</div>
+		<div id="login_area">
 		</div>
 	</div>
 	<div id="article_section">

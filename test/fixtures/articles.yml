@@ -3,7 +3,9 @@
 one:
   title: Test Article #1
   text: This is the first test article.  Something about Twin Falls.
+  user_id: 298486374
 
 two:
   title: Test Article #2
   text: This is the second test article.  Something about Weeping Hill.
+  user_id: 980190962
