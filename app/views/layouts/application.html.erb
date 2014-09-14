@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TwinFallsGazette</title>
+  <title>Twin Falls Gazette</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="masthead">
+		<div id="paper_name">
+			<p><h1>Twin Falls Gazette</h1></p>
+			<p><h2>Covering Twin Falls and the Grey Mountains</h2></p>
+		</div>
+	</div>
+	<div id="article_section">
+		<%= yield %>
+	</div>
 </body>
 </html>
