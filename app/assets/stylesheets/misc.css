@@ -1,13 +1,20 @@
+body{
+	background: url(paper.jpg);
+	color:#444444;
+}
+
 #masthead{
 	padding:2px;
-	background-color:darkolivegreen;
+	#background-color:darkolivegreen;
+	background-color:#669966;
 	color:white;
 	text-align:center;
 	margin-bottom:5px;
 	border-radius:5px;
+	font-family:'Sancreek', Georgia, Serif;
 }
 #masthead h1{
-	font-family:Georgia;
+	#font-family:Georgia, Serif;
 	font-size:60px;
 	font-weight:bold;
 	letter-spacing:4px;
@@ -18,8 +25,28 @@
 	float:right;
 }
 
+#article_section{
+	width:80%;
+	float:right;
+}
+
+#sidebar{
+	display:inline;
+	width:15%;
+	#padding-right:100px;
+	float:left;
+	border-width:2px;
+	border-style:solid;
+	height:400px;
+	text-align:center;
+	font-family: 'Inconsolata', Serif;
+}
+
 article{
 	padding-left:15px;
-	border-width:1px;
+	border-width:2px;
 	border-style:solid;
+	font-family:'Courier New', Georgia, Serif;
+	border-color:#686868;
+	margin-bottom:5px;
 }

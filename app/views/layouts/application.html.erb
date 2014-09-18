@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<% if notice %>
@@ -16,13 +18,19 @@
 	<div id="masthead">
 		<div id="paper_name">
 			<p><h1>Twin Falls Gazette</h1></p>
-			<p><h3>Serving Twin Falls and the Grey Mountains</h3></p>
+			<p><h2>Serving Twin Falls and the Grey Mountains</h2></p>
 		</div>
 		<div id="login_area">
 		</div>
 	</div>
-	<div id="article_section">
-		<%= yield %>
+	<div id="enclosing_box">
+		<div id="sidebar">
+			<p><h4>Play Twin Falls!</h4></p>
+			<p><h4>192.99.44.131:26182</h4></p>
+		</div>
+		<div id="article_section">
+			<%= yield %>
+		</div>
 	</div>
 </body>
 </html>
