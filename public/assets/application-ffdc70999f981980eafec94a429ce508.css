@@ -1,0 +1,68 @@
+body{
+	background: url(paper.jpg);
+	color:#444444;
+}
+
+#masthead{
+	padding:2px;
+	#background-color:darkolivegreen;
+	background-color:#669966;
+	color:white;
+	text-align:center;
+	margin-bottom:5px;
+	border-radius:5px;
+	font-family:'Sancreek', Georgia, Serif;
+}
+#masthead h1{
+	#font-family:Georgia, Serif;
+	font-size:60px;
+	font-weight:bold;
+	letter-spacing:4px;
+}
+
+#login_area{
+	background-color:aliceblue;
+	float:right;
+}
+
+#article_section{
+	width:80%;
+	float:right;
+}
+
+#sidebar{
+	display:inline;
+	width:15%;
+	#padding-right:100px;
+	float:left;
+	border-width:2px;
+	border-style:solid;
+	height:400px;
+	text-align:center;
+	font-family: 'Inconsolata', Serif;
+}
+
+article{
+	padding-left:15px;
+	border-width:2px;
+	border-style:solid;
+	font-family:'Courier New', Georgia, Serif;
+	border-color:#686868;
+	margin-bottom:5px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
