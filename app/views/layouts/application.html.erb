@@ -9,24 +9,30 @@
   <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<% if notice %>
-	<p class="notice"><%= notice %></p>
-	<% end %>
-	<% if alert %>
-    <p class="alert"><%= alert %></p>
-    <% end %>
 	<div id="masthead">
 		<div id="paper_name">
 			<p><h1>Twin Falls Telegram</h1></p>
 			<p><h2>Serving Twin Falls and the Grey Mountains</h2></p>
 		</div>
 		<div id="login_area">
+			Log In
 		</div>
 	</div>
+	<% if notice %>
+	<p class="notice"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
 	<div id="enclosing_box">
 		<div id="sidebar">
+			<p><h4><strong>PRICE: 2 Iron Pieces</strong></h4></p>
+			<hr>
 			<p><h4>Play Twin Falls!</h4></p>
 			<p><h4>192.99.44.131:26182</h4></p>
+			<hr>
+			<p class="boilerplate">Published by the Twin Falls Telegram Printing Co.</p>
+			<p class="boilerplate">Audited Circulation: 5</p>
 		</div>
 		<div id="article_section">
 			<%= yield %>
