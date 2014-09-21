@@ -12,6 +12,8 @@ body{
 	margin-bottom:5px;
 	border-radius:5px;
 	font-family:'Sancreek', Georgia, Serif;
+	#font-variant: small-caps;
+	text-shadow:2px 2px 4px #000000;
 }
 #masthead h1{
 	#font-family:Georgia, Serif;
