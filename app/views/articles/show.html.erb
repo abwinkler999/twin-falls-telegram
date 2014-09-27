@@ -1,1 +1,7 @@
-<h2>Sorry, you can't view an individual article yet.</h2>
+<% this_article = Article.find(@article) %>
+<% if this_article.nil? %>
+<h2>Sorry, this article doesn't exist.</h2>
+<% else %>
+<h2><%= this_article.title %></h2>
+<h3><%= this_article.text %></h3>
+<% end %>

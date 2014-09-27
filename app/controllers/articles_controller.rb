@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		@article = params[:id]
 	end
 
 	def article_params
