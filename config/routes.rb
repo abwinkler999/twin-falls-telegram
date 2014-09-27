@@ -2,9 +2,14 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'articles#index'
+  
+  get 'articles.:id' => 'articles#show', constraints: { id: /\d+/} # the rss builder is generating strange articles_url
   resources :articles
 
   get 'cheat' => 'articles#new' # delete later
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
