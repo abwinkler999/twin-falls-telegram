@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'articles#index'
   resources :articles
+
+  get 'cheat' => 'articles#new' # delete later
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
