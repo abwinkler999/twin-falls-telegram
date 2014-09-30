@@ -10,15 +10,7 @@
   <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div id="masthead">
-		<div id="paper_name">
-			<p><h1><%= link_to "Twin Falls Telegram", root_path %></h1></p>
-			<p><h2><%= link_to "Serving Twin Falls and the Grey Mountains", root_path %></h2></p>
-		</div>
-		<div id="login_area">
-			Log In (Coming Soon)
-		</div>
-	</div>
+	<%= render "layouts/masthead" %>
 	<% if notice %>
 	<p class="notice"><%= notice %></p>
 	<% end %>
@@ -26,9 +18,7 @@
     <p class="alert"><%= alert %></p>
     <% end %>
 	<div id="enclosing_box">
-		<div id="sidebar">
-			<%= render "layouts/sidebar" %>
-		</div>
+		<%= render "layouts/sidebar" %>
 		<div id="article_section">
 			<%= yield %>
 		</div>
