@@ -1,8 +1,14 @@
 <% #binding.pry %>
+<% first_one = true %>
 <% @articles.each { |x| %>
 	<article>
+	<% if first_one %>
+		<p><div ><h2 class="banner_headline"><strong><%= x.title %></strong></h2></div></p>
+	<% else %>
 		<p><h2><strong><%= x.title %></strong></h2></p>
+	<% end %>
 		<p><em>By <%= x.user.name %> (posted <%= x.created_at.strftime("%A, %B %d, %Y") %>)</em><p>
 		<p><%= x.text %></p>
 	</article>
+	<% first_one = false %>
 <% } %>

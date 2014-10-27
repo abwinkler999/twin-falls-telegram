@@ -1,7 +1,7 @@
 body{
 	background: url(paper.jpg);
 	#color:#444444;
-	color:#333333;
+	#color:#333333;
 }
 
 a{
@@ -78,6 +78,11 @@ a{
 	font-size:110%;
 }
 
+.banner_headline{
+	font-size:300%;
+	text-align:center;
+}
+
 article{
 	padding-left:15px;
 	border-width:2px;
@@ -86,7 +91,7 @@ article{
 	border-color:#686868;
 	margin-bottom:5px;
 	margin-right:30px;
-	font-size:18px;
+	font-size:24px;
 }
 
 article h2{
@@ -97,13 +102,16 @@ article h2{
 .alert{
 	border-width:2px;
 	border-style:dotted;
-	background-color:pink;
+	background-color:brown;
+	padding-left: 10px;
+	color:white;
 }
 
 .notice{
 	border-width:2px;
 	border-style:dotted;
 	background-color:springgreen;
+	padding-left: 10px;
 }
 
 #article_text{
