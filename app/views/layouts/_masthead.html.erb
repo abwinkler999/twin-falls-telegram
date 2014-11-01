@@ -4,7 +4,11 @@
 		<p><h2><%= link_to "Serving Twin Falls and the Grey Mountains", root_path %></h2></p>
 	</div>
 	<div id="login_area">
+	<% #binding.pry %>
 		<% if user_signed_in? %>
+			<% if current_user.editor? %>
+				<%= link_to "[POST NEW ARTICLE] | ", new_article_path %>
+			<% end %>
 			<%= "Welcome, #{current_user.name} | " %>
 			<%= link_to "(Logout)", destroy_user_session_path, method: :delete %>
 		<% else %>

@@ -1,5 +1,8 @@
 class ArticlesController < ApplicationController
 	def new
+		unless actor_is_editor
+			redirect_to(root_path, notice: "Only editors can create articles!")
+		end
 		@article = Article.new(user: User.last)
 	end
 
@@ -11,6 +14,12 @@ class ArticlesController < ApplicationController
 		else
 			flash.alert = @article.errors.inspect
 			render 'new'
+		end
+	end
+
+	def edit
+		unless actor_is_editor
+			redirect_to(root_path, notice: "Only editors can edit articles!")
 		end
 	end
 
@@ -30,4 +39,8 @@ class ArticlesController < ApplicationController
 	def article_params
        params.require(:article).permit(:title, :text, :user)
     end
+
+    def actor_is_editor
+		return user_signed_in? && current_user.editor?
+	end
 end
