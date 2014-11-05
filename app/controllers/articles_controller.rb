@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all.reverse
+		@articles = Article.all.order(created_at: desc)
 
 		respond_to do |format|
 			format.html
