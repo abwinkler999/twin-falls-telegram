@@ -9,6 +9,8 @@ group :development, :test do
 	gem 'sqlite3'
 	gem 'pry'
 	gem 'rspec-rails', '~> 3.0.0'
+	gem 'cucumber-rails', require: false
+	gem 'database_cleaner'
 end
 
 group :production do

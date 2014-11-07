@@ -2,12 +2,10 @@ require "rails_helper"
 
 describe User do
 	it "can create a new user" do
-		boop = User.count
-		foo = User.new
-		foo.password = "cool_password"
-		foo.name = "Bob Foobar"
-		foo.email = "nobody@nowhere.com"
-		successful_save = foo.save
+		subject.password = "cool_password"
+		subject.name = "Bob Foobar"
+		subject.email = "nobody@nowhere.com"
+		successful_save = subject.save
 		expect(successful_save).to be_truthy
 	end
 end
