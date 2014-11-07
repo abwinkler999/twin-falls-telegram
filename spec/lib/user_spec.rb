@@ -7,10 +7,8 @@ describe User do
 		foo.password = "cool_password"
 		foo.name = "Bob Foobar"
 		foo.email = "nobody@nowhere.com"
-		foo.save
-		#foo.save.should == true
-		puts User.find_by(name: "Bob Foobar").name
-		expect(User.find_by(name: "Bob Foobar")).not_to eq(nil)
-		#User.where(name: "Bob Foobar").count.should == 1
+		successful_save = foo.save
+		expect(successful_save).to be_truthy
 	end
 end
+
