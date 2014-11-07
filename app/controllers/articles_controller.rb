@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_params)
-		@article.user = User.last # cheating - no login model yet
+		@article.user = current_user
 		if @article.save
 			redirect_to(root_path, notice: "Successfully saved.")
 		else
