@@ -9,7 +9,8 @@ describe User do
 		foo.email = "nobody@nowhere.com"
 		foo.save
 		#foo.save.should == true
-		expect(User.count).to eq(1)
+		puts User.find_by(name: "Bob Foobar").name
+		expect(User.find_by(name: "Bob Foobar")).not_to eq(nil)
 		#User.where(name: "Bob Foobar").count.should == 1
 	end
 end
