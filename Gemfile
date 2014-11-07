@@ -11,6 +11,8 @@ group :development, :test do
 	gem 'rspec-rails', '~> 3.0.0'
 	gem 'cucumber-rails', require: false
 	gem 'database_cleaner'
+	gem 'page-object'
+	gem 'watir-webdriver'
 end
 
 group :production do
