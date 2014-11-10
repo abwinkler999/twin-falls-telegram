@@ -3,11 +3,11 @@
 <% @articles.each { |x| %>
 	<article>
 	<% if first_one %>
-		<div><h2 class="banner_headline"><strong><%= x.title %></strong></h2></div>
+		<div><h2 class="banner headline"><strong><%= x.title %></strong></h2></div>
 	<% else %>
-		<h2><strong><%= x.title %></strong></h2>
+		<h2 class="headline"><strong><%= x.title %></strong></h2>
 	<% end %>
-		<p><em>By <%= x.user.name %> (posted <%= x.created_at.strftime("%A, %B %d, %Y") %>)</em><p>
+		<p><em>By <%= x.user.name %> <span class="date_posted">(posted <%= x.created_at.strftime("%A, %B %d, %Y") %>)</span></em><p>
 		<p><%= x.text %></p>
 	</article>
 	<% first_one = false %>
