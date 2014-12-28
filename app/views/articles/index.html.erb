@@ -1,14 +1,17 @@
-<% #binding.pry %>
 <% first_one = true %>
-<% @articles.each { |x| %>
+<% @articles.each { |this_article| %>
 	<article>
-	<% if first_one %>
-		<div><h2 class="banner headline"><strong><%= x.title %></strong></h2></div>
-	<% else %>
-		<h2 class="headline"><strong><%= x.title %></strong></h2>
-	<% end %>
-		<p><em>By <%= x.user.name %> <span class="date_posted">(posted <%= x.created_at.strftime("%A, %B %d, %Y") %>)</span></em><p>
-		<p><%= x.text %></p>
+		<div>
+			<%= link_to(this_article) do %>
+				<% if first_one %>
+					<h2 class="banner headline">
+				<% else %>
+					<h2 class="headline">
+				<% end %>
+				<strong><%= this_article.title %></strong></h2>
+			<% end %>
+		</div>
+		<%= render partial: "layouts/article_display", locals: { this_article: this_article } %>
 	</article>
 	<% first_one = false %>
 <% } %>
