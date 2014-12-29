@@ -4,10 +4,12 @@ class ArticlesController < ApplicationController
 			redirect_to(root_path, notice: "Only editors can create articles!")
 		end
 		@article = Article.new(user: User.last)
+		@tags = Tag.all
 	end
 
 	def create
 		@article = Article.new(article_params)
+		binding.pry
 		@article.user = current_user
 		if @article.save
 			redirect_to(root_path, notice: "Successfully saved.")

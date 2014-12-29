@@ -10,6 +10,13 @@
 				<%= f.label :text %>
 				<%= f.text_area :text, cols:25, id:"article_text_field" %>
 			</div>
+			<div id="tags_block">
+				<% @tags.each do |t| %> # to fix Google on HABTM checkboxes
+				#https://github.com/railscasts/017-habtm-checkboxes-revised/blob/master/store-after/app/views/products/_form.html.erb
+					<%= check_box_tag "article[tag_ids][]", t.name, @article.tags.include?(t) %>
+					<%= t.name %>
+				<% end %>
+			</div>
 		</p>
 		<%= f.submit value:"Publish Article", class:"publish_button"%>
 	<% end %>
