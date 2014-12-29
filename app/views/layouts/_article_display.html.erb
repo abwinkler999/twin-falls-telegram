@@ -1,2 +1,2 @@
-<p><em>By <%= this_article.user.name %> <span class="date_posted">(posted <%= this_article.created_at.strftime("%A, %B %d, %Y") %>)</span></em><p>
+<p><em>By <%= this_article.user.name %> <%= link_to '[E]', edit_article_path(this_article.id) %> <span class="date_posted">(posted <%= this_article.created_at.strftime("%A, %B %d, %Y") %>)</span></em><p>
 <p><%= this_article.text %></p>

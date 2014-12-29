@@ -12,7 +12,9 @@ class ArticlesController < ApplicationController
 		if @article.save
 			redirect_to(root_path, notice: "Successfully saved.")
 		else
-			flash.alert = @article.errors.inspect
+			generated_error_messages = ""
+			@article.errors.full_messages.each { |msg| generated_error_messages << msg; generated_error_messages << "\n\r"}
+			flash.alert = generated_error_messages
 			render 'new'
 		end
 	end
@@ -21,6 +23,7 @@ class ArticlesController < ApplicationController
 		unless actor_is_editor
 			redirect_to(root_path, notice: "Only editors can edit articles!")
 		end
+		@article = Article.find(params[:id])
 	end
 
 	def index
@@ -34,6 +37,19 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = params[:id]
+	end
+
+	def update
+		@article = Article.find(params[:id])
+
+		if @article.update(article_params)
+			redirect_to articles_path
+		else
+			generated_error_messages = ""
+			@article.errors.full_messages.each { |msg| generated_error_messages << msg; generated_error_messages << "\n\r"}
+			flash.alert = generated_error_messages
+			render 'edit'
+		end
 	end
 
 	def article_params
