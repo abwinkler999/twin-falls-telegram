@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-       params.require(:article).permit(:title, :text, :user)
+       params.require(:article).permit(:title, :text, :user, :tag_ids)
     end
 
     def actor_is_editor
