@@ -8,9 +8,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		binding.pry
 		@article = Article.new(article_params)
-		binding.pry
 		@article.user = current_user
 		if @article.save
 			redirect_to(root_path, notice: "Successfully saved.")

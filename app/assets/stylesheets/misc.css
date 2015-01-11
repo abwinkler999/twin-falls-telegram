@@ -164,3 +164,29 @@ article a{
 .centered_header{
 	margin-left:120px;
 }
+
+.bubble_button{
+	border-style:solid;
+	border-width:1px;
+	background:slategrey;
+	border-radius:3px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:1px;
+	padding-bottom:1px;
+	font-size:70%;
+	font-family: sans-serif;
+}
+.tagname{
+	border-style:solid;
+	border-width:1px;
+	background:#669966;
+	border-radius:3px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:1px;
+	padding-bottom:1px;
+	font-size:50%;
+	font-weight:bold;
+	font-family: sans-serif
+}

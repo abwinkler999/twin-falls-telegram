@@ -6,13 +6,13 @@
 	<div id="login_area">
 		<% if user_signed_in? %>
 			<% if current_user.editor? %>
-				<%= link_to "[POST NEW ARTICLE] | ", new_article_path %>
+				<span class="bubble_button"><%= link_to "POST NEW ARTICLE", new_article_path %></span>
 			<% end %>
 			<%= "Welcome, #{current_user.name} | " %>
-			<%= link_to "(Logout)", destroy_user_session_path, method: :delete %>
+			<span class="bubble_button"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></span>
 		<% else %>
 			<%= "Welcome, Guest User | " %>
-			<%= link_to "Log In", new_user_session_path %>
+			<span class="bubble_button"><%= link_to "LOG IN", new_user_session_path %></span>
 		<% end %>
 	</div>
 </div>
