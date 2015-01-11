@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
+		binding.pry
 		@article = Article.new(article_params)
 		binding.pry
 		@article.user = current_user
@@ -55,7 +56,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-       params.require(:article).permit(:title, :text, :user, :tag_ids)
+       params.require(:article).permit(:title, :text, :user, tags: [])
     end
 
     def actor_is_editor

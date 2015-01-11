@@ -11,9 +11,8 @@
 				<%= f.text_area :text, cols:25, id:"article_text_field" %>
 			</div>
 			<div id="tags_block">
-			<%= hidden_field_tag "article[tag_ids][]", nil %>
 				<% @tags.each do |t| %>
-					<%= check_box_tag "article[tag_ids][]", t.name, @article.tags.include?(t) %>
+					<%= check_box_tag 'article[tags][]', t.name, @article.tags.include?(t) %>
 					<%= t.name %>
 				<% end %>
 			</div>
