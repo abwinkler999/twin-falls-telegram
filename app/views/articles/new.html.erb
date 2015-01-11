@@ -11,10 +11,8 @@
 				<%= f.text_area :text, cols:25, id:"article_text_field" %>
 			</div>
 			<div id="tags_block">
-				<% @tags.each do |t| %>
-					<%= check_box_tag 'article[tags][]', t.name, @article.tags.include?(t) %>
-					<%= t.name %>
-				<% end %>
+				<% Tag.each{|x| foo << x.name } %>
+				<%= f.collection_check_boxes :tags, foo, :to_s, :to_s  %>
 			</div>
 		</p>
 		<%= f.submit value:"Publish Article", class:"publish_button"%>
