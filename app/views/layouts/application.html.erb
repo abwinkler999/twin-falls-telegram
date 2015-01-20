@@ -10,15 +10,19 @@
   <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<%= render "layouts/masthead" %>
-	<% if notice %>
-	<p class="notice"><%= notice %></p>
-	<% end %>
-	<% if alert %>
-    <p class="alert"><%= alert %></p>
-    <% end %>
-	<div id="enclosing_box">
-		<div id="article_section">
+	<div class="container">
+		<div class="row" id="masthead">
+			<%= render "layouts/masthead" %>
+		</div>
+		<div class="row" id="flash">
+			<% if notice %>
+			<p class="notice"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+		    <p class="alert"><%= alert %></p>
+		    <% end %>
+	    </div>
+		<div class="row" id="articles">
 			<%= yield %>
 		</div>
 	</div>
