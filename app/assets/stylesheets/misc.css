@@ -74,7 +74,7 @@ a{
 }
 
 #weatherbox{
-	font-size:50%;
+	#font-size:100%;
 	display:inline;
 	width:15%;
 	float:right;
@@ -91,6 +91,13 @@ a{
 	letter-spacing:1px;
 }
 
+#weatherbox h2{
+	font-size:100%;
+}
+
+.weathertext{
+	font-size:25%;
+}
 .boilerplate{
 	font-size:80%;
 }
