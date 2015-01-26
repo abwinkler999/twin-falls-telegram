@@ -28,6 +28,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
+		@pageview = Pageview.create(url: "articles#index", ip: (request.remote_ip.to_s))
 		@articles = Article.all.order(created_at: :desc)
 
 		respond_to do |format|
@@ -37,6 +38,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		@pageview = Pageview.create(url: "article #{params[:id].to_s}", ip: (request.remote_ip.to_s))
 		@article = params[:id]
 	end
 
