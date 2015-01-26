@@ -282,3 +282,17 @@ article a{
 .railcolumn{
 	padding:0px 0px 0px 0px;
 }
+
+#comingsoon{
+	padding-top:8px;
+	text-align:center;
+	background-color:aliceblue;
+	margin-left:3px;
+	border-style:dotted;
+	border-width:2px;
+	font-family: 'Inconsolata', Serif;
+}
+
+#ec{
+	font-family:'Sancreek', Georgia, Serif;
+}
