@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/subway', as: "subway"
+
   devise_for :users
   root to: 'articles#index'
   

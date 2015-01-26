@@ -1,1 +1,6 @@
 <h2>Whee!</h2>
+<% @all_personals = Personal.all %>
+<% @all_personals.each { |p| %>
+<p><%= p.body %></p>
+<% } %>
+<%= "User's IP: #{request.remote_ip.to_s}" %>

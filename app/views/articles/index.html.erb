@@ -1,17 +1,19 @@
-<% first_one = true %>
-<% @articles.each { |this_article| %>
-	<article>
-		<div>
-			<%= link_to(this_article) do %>
-				<% if first_one %>
-					<h2 class="banner headline">
-				<% else %>
-					<h2 class="headline">
+<div class="col-md-10">
+	<% first_one = true %>
+	<% @articles.each { |this_article| %>
+		<article>
+			<div>
+				<%= link_to(this_article) do %>
+					<% if first_one %>
+						<h2 class="banner headline">
+					<% else %>
+						<h2 class="headline">
+					<% end %>
+					<strong><%= this_article.title %></strong></h2>
 				<% end %>
-				<strong><%= this_article.title %></strong></h2>
-			<% end %>
-		</div>
-		<%= render partial: "layouts/article_display", locals: { this_article: this_article } %>
-	</article>
-	<% first_one = false %>
-<% } %>
+			</div>
+			<%= render partial: "layouts/article_display", locals: { this_article: this_article } %>
+		</article>
+		<% first_one = false %>
+	<% } %>
+</div>
