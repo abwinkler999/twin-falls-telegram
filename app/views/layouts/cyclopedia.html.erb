@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Cyclopedia Cataractica</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= auto_discovery_link_tag(:rss, "http://twinfalls.abwinkler.com") %>
+	  <%= csrf_meta_tags %>
+	  <link href='http://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row" id="cyclohead">
+				<%= render "layouts/cyclohead" %>
+			</div>
+			<div class="row" id="flash">
+				<% if notice %>
+				<p class="notice"><%= notice %></p>
+				<% end %>
+				<% if alert %>
+			    <p class="alert"><%= alert %></p>
+			    <% end %>
+		    </div>
+			<div class="row" id="entries">
+				<%= yield %>
+			</div>
+		</div>
+	</body>
+</html>

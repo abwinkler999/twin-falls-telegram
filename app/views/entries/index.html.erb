@@ -1,0 +1,8 @@
+<div>
+	<% @entries.each { |this_entry| %>
+		<div class="entry">
+				<p><h2><%= this_entry.name %></h2></p>
+				<p><%= this_entry.body %></p>
+		</div>
+	<% } %>
+</div>
