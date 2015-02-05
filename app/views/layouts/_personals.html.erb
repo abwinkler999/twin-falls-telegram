@@ -1,6 +1,12 @@
-<h2>Whee!</h2>
-<% @all_personals = Personal.all %>
-<% @all_personals.each { |p| %>
-<p><%= p.body %></p>
-<% } %>
-<%= "User's IP: #{request.remote_ip.to_s}" %>
+<h3 class="personal_ads_header">Personal Advertisements</h3>
+		<% @all_personals = Personal.all.order(created_at: :desc) %>
+		<% @all_personals.each { |p| %>
+<div class="personal_ad">
+	<p class="personal_text"><span class="big_initial"><%= p.first_letter %></span>
+	<span class="rest_of_personal"><%= p.rest_of_text %></span>
+	</p>
+	<% if p.signature %>
+		<span class="signed"><%= p.signature %></span>
+	<% end %>
+</div>
+	<% } %>
