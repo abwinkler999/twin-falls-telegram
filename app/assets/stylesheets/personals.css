@@ -1,0 +1,40 @@
+.personal_ad{
+	font-family:'Courier New', Georgia, Serif;
+	margin-top:8px;
+	border-width:1px;
+	border-bottom-style:solid;
+	border-right-style:solid;
+}
+
+.personal_ads_header{
+	font-family:'Courier New', Georgia, Serif;
+	font-weight:bolder;
+	letter-spacing:3px;
+	text-align:center;
+	font-variant:small-caps;
+	background:#669966;
+	color:white;
+	margin-bottom:10px;
+}
+
+.big_initial{
+	font-family:Georgia;
+	font-size:250%;
+	font-weight:bold;
+}
+
+.rest_of_personal{
+	vertical-align:40%;
+}
+
+.personal_text{
+	font-weight:bolder;
+	padding-left:6px;
+	margin-bottom:1px;
+	line-height:90%;
+}
+
+.signed{
+	font-weight:bolder;
+	padding-left:45px;
+}

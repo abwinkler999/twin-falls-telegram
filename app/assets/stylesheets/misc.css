@@ -291,6 +291,7 @@ article a{
 	border-style:dotted;
 	border-width:2px;
 	font-family: 'Inconsolata', Serif;
+	line-height: 60%;
 }
 
 #ec{
