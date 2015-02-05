@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'personals/delete'
+
   get 'static_pages/subway', as: "subway"
 
   devise_for :users
