@@ -1,7 +1,6 @@
 class PersonalsController < ApplicationController
-  def delete
+  def destroy
   	#@personal = Personal.find(params[:id])
   	redirect_to(root_path, notice: params.inspect)
-
   end
 end

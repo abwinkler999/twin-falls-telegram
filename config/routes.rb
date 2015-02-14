@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'personals/delete'
+  get 'personals/destroy'
 
   get 'static_pages/subway', as: "subway"
 
