@@ -22,3 +22,7 @@ Personal.find_or_create_by(body: "Honest jobs for honest men - stop dwarven labo
 Personal.find_or_create_by(body: "Has anyone considered whether the raiders were merely dressed as Torr?", signed: "Concerned")
 Personal.find_or_create_by(body: "The Museum of Heraldry will be closing early on Tuesday for cleaning.")
 Personal.find_or_create_by(body: "Happy Birthday, Fred!", signed: "Ziggy and Jay")
+Article.find_or_create_by(title: "Sample Post", text: "Nobis nostrud patrioque his id, fierent facilisi qui ad. Sint altera maluisset nec et, porro ubique conceptam id nam.", user: User.first)
+Article.find_or_create_by(title: "Another Post", text: "Ad consul quidam invidunt ius. Rebum laudem petentium mea ea. Mei ne magna facete, qui epicuri scribentur ex. Quod eruditi mei at, falli viris commune no quo.", user: User.first)
+Article.find_or_create_by(title: "Further News", text: "Ei sit deleniti apeirian appellantur, cum simul omnesque ea. Eos ut ancillae mediocrem disputationi, at purto tollit liberavisse vix.", user: User.first)
+Article.find_or_create_by(title: "Additional News", text: "Debet invenire definitionem id eum, ullum sapientem pri ne, mnesarchum complectitur per ea. Vis partem facilisis conclusionemque ad, recusabo argumentum eos in.", user: User.first)
