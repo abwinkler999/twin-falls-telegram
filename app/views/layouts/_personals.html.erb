@@ -4,7 +4,7 @@
 	<div class="personal_ad">
 	<p class="personal_text">
 		<span class="big_initial">
-		<%= link_to_if((user_signed_in? && current_user.editor?), p.first_letter, {controller: "personals", action: "destroy", id: p}, data: {confirm: "Are you sure you want to delete this personal ad?"}) %>
+		<%= link_to_if((user_signed_in? && current_user.editor?), p.first_letter, {controller: "personals", action: "destroy", method:"delete", id: p}, data: {confirm: "Are you sure you want to delete this personal ad?"}) %>
 		</span>
 		<span class="rest_of_personal"><%= p.rest_of_text %></span>
 		</p>
