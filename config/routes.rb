@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'personals/destroy'
+  get 'personals/create'
 
   get 'static_pages/subway', as: "subway"
 
@@ -10,7 +11,6 @@ Rails.application.routes.draw do
   get 'articles.:id' => 'articles#show', constraints: { id: /\d+/} # the rss builder is generating strange articles_url
   get 'pageviews/' => 'pageview#index'
   resources :articles
-  resources :personals
 
 
 

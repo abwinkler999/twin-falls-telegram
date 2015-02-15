@@ -19,7 +19,7 @@
 <div id="new_personal_block">
 	<% temporary_personal = Personal.new %>
 	<%= form_for(temporary_personal) do |f| %>
-		<%= f.label :body %>
+		<%= f.label "Message" %>
 		<%= f.text_area :body%>
 		<%= f.label :signed %>
 		<%= f.text_field :signed %>

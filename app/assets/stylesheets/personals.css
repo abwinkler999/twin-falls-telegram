@@ -53,3 +53,11 @@
 	font-variant:small-caps;
 	margin-left:1px;
 }
+
+.post_ad_button{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	font-variant:normal;
+	margin-left:40px;
+	margin-top:5px;
+}
