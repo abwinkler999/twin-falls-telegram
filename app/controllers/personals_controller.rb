@@ -17,8 +17,7 @@ class PersonalsController < ApplicationController
   end
 
   def destroy
-  	binding.pry
-  	@personal = Personal.find(params[:id])
+  	@personal = Personal.find(params[:format])
   	notice_text = @personal.body
   	@personal.destroy
   	redirect_to(root_path, notice: "Personal ad '#{notice_text}' deleted.")
