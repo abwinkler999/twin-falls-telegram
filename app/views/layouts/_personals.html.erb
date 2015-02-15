@@ -19,9 +19,9 @@
 <div id="new_personal_block">
 	<% temporary_personal = Personal.new %>
 	<%= form_for(temporary_personal) do |f| %>
-		<%= f.label "Message" %>
-		<%= f.text_area :body%>
-		<%= f.label :signed %>
+		<%= f.label "Message", class:"personal_caption" %>
+		<%= f.text_area :body %>
+		<%= f.label :signed, class:"personal_caption" %>
 		<%= f.text_field :signed %>
 		<%= f.submit value:"Post Ad", class:"btn btn-primary post_ad_button"%>
 	<% end %>

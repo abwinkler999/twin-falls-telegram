@@ -43,17 +43,23 @@
 	font-family:'Sancreek', Georgia, Serif;
 	margin-left:2px;
 	padding-left:2px;
-	margin-top:4px;
+	margin-top:6px;
 	background:#669966;
-}
-#new_personal_block{
-	padding-top:15px;
-	font-family:'Courier New', Georgia, Serif;
-	font-weight:bolder;
-	font-variant:small-caps;
-	margin-left:1px;
+	text-align:center;
 }
 
+#new_personal_block{
+	padding-top:15px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight:bolder;
+	font-variant:small-caps;
+	margin-left:1px;;
+}
+
+.personal_caption{
+	width:50px;
+	margin-right:2px;
+}
 .post_ad_button{
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight:normal;
