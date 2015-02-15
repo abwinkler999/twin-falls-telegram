@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'articles.:id' => 'articles#show', constraints: { id: /\d+/} # the rss builder is generating strange articles_url
   get 'pageviews/' => 'pageview#index'
   resources :articles
+  resources :personals
 
 
 
