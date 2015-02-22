@@ -2,7 +2,7 @@
 	<p><em>By <%= this_article.user.name %>
 	<span class="date_posted">(posted <%= this_article.created_at.strftime("%A, %B %d, %Y") %>)</span></em>
 	<span class="edit_button"><%= link_to 'EDIT POST', edit_article_path(this_article.id) %></span></p>
-	<p><%= this_article.text %></p>
+	<p><%= simple_format this_article.text %></p>
 	<p><% if this_article.tags.any? %>
 	<% this_article.tags.each {|x| %>
 	<span class="tagname"><%= x.name.upcase %></span>
