@@ -59,7 +59,7 @@ class ArticlesController < ApplicationController
        params.require(:article).permit(:title, :text, :user, { tag_ids: [] })
     end
 
-    def actor_is_editor
-		return user_signed_in? && current_user.editor?
+  def actor_is_editor
+		return user_signed_in? && current_user.is_an_editor?
 	end
 end

@@ -10,7 +10,7 @@
 
 		<div id="login_area">
 			<% if user_signed_in? %>
-				<% if current_user.editor? %>
+				<% if current_user.is_an_editor? %>
 					<span class="bubble_button"><%= link_to "POST NEW ARTICLE", new_article_path %></span>
 				<% end %>
 				<%= "Welcome, #{current_user.name} | " %>

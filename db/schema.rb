@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816205440) do
+ActiveRecord::Schema.define(version: 20150816210748) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20150816205440) do
     t.string   "name"
     t.boolean  "editor",                 default: false
     t.string   "initials"
+    t.integer  "user_type_id",           default: 1
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
