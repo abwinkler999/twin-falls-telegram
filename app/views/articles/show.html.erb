@@ -1,7 +1,7 @@
 <article>
 <% this_article = Article.find(@article) %>
 <% if this_article.nil? %>
-	<h2>Sorry, this article doesn't exist.</h2>
+	<h2>Sorry, this article can't be found.</h2>
 <% else %>
 	<h2 class="headline"><strong><%= this_article.title %></strong></h2>
 	<%= render partial: "layouts/article_display", locals: { this_article: this_article } %>
