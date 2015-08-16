@@ -1,6 +1,7 @@
 <div class="col-md-10">
 	<% first_one = true %>
 	<% @articles.each { |this_article| %>
+		<% next if this_article.game_id != 1 %> 
 		<article>
 			<div>
 				<%= link_to(this_article) do %>
