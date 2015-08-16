@@ -1,0 +1,27 @@
+.thread_title{
+  font-family:Georgia;
+  background-color:silver;
+  font-size:180%;
+  margin-bottom:5px;
+  padding-left:15px;
+  border-style:solid;
+  border-width:0px;
+  border-bottom-width:thick
+}
+.post_title{
+  font-size: 120%;
+}
+
+.rpg_post{
+  background-color:white;
+  margin-bottom:5px;
+  padding:1px;
+  border-style:solid;
+  border-width:2px;
+}
+
+.rpg_post_content{
+  border-style:solid;
+  border-width:0px;
+  border-left-width:thin;
+}

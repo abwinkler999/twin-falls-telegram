@@ -7,14 +7,12 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'articles#index'
-  
+
   get 'articles.:id' => 'articles#show', constraints: { id: /\d+/} # the rss builder is generating strange articles_url
   get 'pageviews/' => 'pageview#index'
   resources :articles
   resources :personals
-
-
-
+  resources :discussion_threads
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
