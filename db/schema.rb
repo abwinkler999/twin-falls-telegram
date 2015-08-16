@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816210748) do
+ActiveRecord::Schema.define(version: 20150816213203) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 20150816210748) do
   create_table "articles_tags", id: false, force: true do |t|
     t.integer "article_id"
     t.integer "tag_id"
+  end
+
+  create_table "discussion_threads", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "entries", force: true do |t|
@@ -52,6 +58,15 @@ ActiveRecord::Schema.define(version: 20150816210748) do
     t.text     "body"
     t.string   "signed"
     t.string   "ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "name"
+    t.string   "text"
+    t.integer  "discussion_thread_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
