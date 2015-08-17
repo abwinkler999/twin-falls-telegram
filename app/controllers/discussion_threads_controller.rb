@@ -2,6 +2,9 @@ class DiscussionThreadsController < ApplicationController
 	layout "rpg"
 	def index
 		# presently hardwired to support one and only one thread
+		if current_user == nil
+			redirect_to root_path
+		end
   		@discussion_thread = DiscussionThread.first
   end
 
