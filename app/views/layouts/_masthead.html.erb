@@ -15,6 +15,7 @@
 				<% end %>
 				<%= "Welcome, #{current_user.name} | " %>
 				<span class="bubble_button"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></span>
+				<span class="bubble_button"><%= link_to "D&D GAME", discussion_threads_path %></span>
 			<% else %>
 				<%= "Welcome, Guest User | " %>
 				<span class="bubble_button"><%= link_to "LOG IN", new_user_session_path %></span>
