@@ -1,3 +1,9 @@
+body{
+	background: url(planks_1.jpg);
+	#color:#444444;
+	#color:#333333;
+}
+
 .thread_title{
   font-family:Georgia;
   background-color:silver;
