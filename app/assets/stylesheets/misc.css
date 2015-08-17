@@ -157,10 +157,11 @@ article a{
 }
 
 .notice{
+	width:80%;
 	border-width:2px;
 	border-style:dotted;
 	background-color:springgreen;
-	#padding-left: 10px;
+	padding-left: 100px;
 }
 
 #article_text{

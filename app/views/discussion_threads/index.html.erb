@@ -1,0 +1,32 @@
+<div class = "thread_title">
+  <%= @discussion_thread.name %>
+</div>
+
+<div class = "row">
+  <div class = "col-md-1">
+  </div>
+  <div class = "col-md-10">
+    <% @discussion_thread.posts.each { |x| %>
+      <div class = "row rpg_post">
+        <div class = "col-md-1">
+          <h4><%= x.user.name %></h4>
+        </div>
+        <div class = "col-md-9 rpg_post_content">
+          <p class = "post_title"><%= x.name %></p>
+          <p class = "post_text"><%= x.text %></p>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</div>
+<div class="row" id="flash">
+  <% if notice %>
+  <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
+  </div>
+<div class = "row">
+  	<%= render "layouts/send_to_dm" %>
+</div>

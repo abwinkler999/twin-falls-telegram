@@ -1,0 +1,9 @@
+<div class = "row">
+  <div class = "col-md-9 col-md-offset-2">
+    <%= form_tag({controller: "discussion_threads", action:"scrap"}) do %>
+    <%= text_area_tag 'instructions', nil, placeholder: "What do you want your character to do?", rows: 8, cols: 65 %>
+    <%= hidden_field_tag 'user', current_user.name %>
+    <%= submit_tag 'Send Message to DM', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

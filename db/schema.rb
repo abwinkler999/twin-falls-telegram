@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816213203) do
+ActiveRecord::Schema.define(version: 20150817021421) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -67,6 +67,12 @@ ActiveRecord::Schema.define(version: 20150816213203) do
     t.text     "text"
     t.integer  "discussion_thread_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scraps", force: true do |t|
+    t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
