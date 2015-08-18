@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   def is_an_editor?
     return self.user_type == UserType.where(name:"editor").first
   end
+
+  def is_a_dm?
+    return self.user_type == UserType.where(name:"DM").first
+  end
 end
