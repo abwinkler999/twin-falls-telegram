@@ -1,4 +1,4 @@
-body{
+body.paper_background{
 	background: url(paper.jpg);
 	#color:#444444;
 	#color:#333333;
@@ -213,7 +213,7 @@ article a{
 	padding-right:10px;
 	padding-top:1px;
 	padding-bottom:1px;
-	font-size:70%;
+	font-size:90%;
 	font-family: sans-serif;
 }
 
