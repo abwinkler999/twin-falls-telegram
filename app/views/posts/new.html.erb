@@ -1,0 +1,16 @@
+<div id="new_article_block">
+	<h1 class="centered_header">New Article</h1>
+	<%= form_for(@post) do |f| %>
+		<p>
+			<div id="title_block">
+				<%= f.label :name %>
+				<%= f.text_field :name, size:75, id:"name_field" %>
+			</div>
+			<div id="text_block">
+				<%= f.label :text %>
+				<%= f.text_area :text, cols:25, id:"post_text_field" %>
+			</div>
+		</p>
+		<%= f.submit value:"Publish Post", class:"publish_button"%>
+	<% end %>
+</div>

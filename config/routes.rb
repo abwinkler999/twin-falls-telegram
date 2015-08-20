@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :personals
   resources :discussion_threads
   resources :scraps
+  resources :posts
   post 'discussion_threads/scrap' => 'discussion_threads#scrap'
 
   # The priority is based upon order of creation: first created -> highest priority.
