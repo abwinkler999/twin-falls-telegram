@@ -23,6 +23,9 @@ end
 gem 'devise'
 gem 'httparty'
 
+gem 'haml'
+gem 'haml-rails'
+
 gem 'bootstrap-sass', '>= 3.3.2'
 gem 'autoprefixer-rails'
 
@@ -59,4 +62,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

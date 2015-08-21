@@ -1,0 +1,24 @@
+.local_container
+  .row.thread_title
+    .col-md-9= @discussion_thread.name
+    .col-md-3.player_name_text= "You are #{current_user.name}"
+  .row
+    .col-md-1
+    .col-md-10
+      - @discussion_thread.posts.each do |x|
+        .row.rpg_post
+          .col-md-1.rpg_post_originator
+            %p
+              %h4= x.user.name
+            %p{class: "post_time"}= x.created_at.strftime("%a, %b %e at %l:%M %p")
+          .col-md-9.rpg_post_content
+            %p{class: "post_title"}= x.name
+            %p{class: "post_text"}= simple_format x.text
+
+  .row{id: "flash"}
+    - if notice
+      %p{class:"notice"}= notice
+    - if alert
+      %p{class:"alert"}= alert
+  .row
+    = render partial: "send_to_dm"
