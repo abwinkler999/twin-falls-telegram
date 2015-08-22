@@ -3,14 +3,21 @@
     .col-md-9= @discussion_thread.name
     .col-md-3.player_name_text= "You are #{current_user.name}"
   .row
-    .col-md-1
+    .col-md-1.gold_sidebar
+      %p
+        .rpg_button= link_to "LOG OUT", destroy_user_session_path, method: :delete
+      %p
+        - if current_user.is_a_dm?
+          .rpg_button= link_to "New Post", new_post_path
     .col-md-10
       - @discussion_thread.posts.each do |x|
         .row.rpg_post
           .col-md-1.rpg_post_originator
             %p
-              %h4= x.user.name
+              .poster_text= x.user.name
             %p{class: "post_time"}= x.created_at.strftime("%a, %b %e at %l:%M %p")
+            - if current_user.is_a_dm?
+              .rpg_button= link_to "Edit Post", edit_post_path(id:x)
           .col-md-9.rpg_post_content
             %p{class: "post_title"}= x.name
             %p{class: "post_text"}= simple_format x.text

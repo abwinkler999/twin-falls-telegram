@@ -1,10 +1,21 @@
 body{
-		background: url(planks_1.jpg);
+	background: url(planks_1.jpg);
+}
+
+.gold_sidebar{
+	#background-color:black;
+	padding-top:10px;
+	background: url(gold_coins.jpg);
+	height:800px;
+}
+.gold_sidebar.body{
+	background-color:black;
+	#background: url(gold_coins.jpg);
 }
 
 .thread_title{
   font-family:Georgia;
-  background-color:silver;
+  background-color:Gainsboro;
   font-size:180%;
   margin-bottom:5px;
   padding-left:15px;
@@ -12,17 +23,19 @@ body{
   border-width:0px;
   border-bottom-width:thick
 }
+
 .post_title{
   font-size: 120%;
 }
 
 .rpg_post{
   background-color:white;
-  margin-bottom:5px;
+  margin-bottom:4px;
   padding:1px;
 	border-radius:8px;
   border-style:solid;
   border-width:2px;
+	margin-left:1px;
 }
 
 .rpg_post_content{
@@ -39,10 +52,29 @@ body{
 }
 
 .player_name_text{
-	font-size:70%;
+	font-size:80%;
 	padding-top:5px;
+
+}
+
+.poster_text{
+	font-variant:small-caps;
 }
 
 .post_time{
 	font-size:70%;
+}
+
+.rpg_button{
+	border-style:solid;
+	border-width:1px;
+	background:Brown;
+	border-radius:3px;
+	margin-left:2px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:1px;
+	padding-bottom:1px;
+	font-size:90%;
+	font-family: sans-serif;
 }
