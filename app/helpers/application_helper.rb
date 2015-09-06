@@ -2,8 +2,11 @@ module ApplicationHelper
 	require 'httparty'
 
   	def pull_weather()
-      location = [:elliotville, :twin_falls, :samshire, :spencerville, :bright_plain, :witch_haven, :maen_hir, :powdermill_road, :gravel_barrens, :weeping_hill, :flower_hill].sample
+      location = [:barmouth_light, :elliotville, :twin_falls, :samshire, :spencerville, :bright_plain, :witch_haven, :maen_hir, :powdermill_road, :gravel_barrens, :weeping_hill, :flower_hill].sample
   		case location
+		  when :barmouth_light
+		    stand_in = "Plymouth"
+		    locale = "Barmouth Light"
   		  when :elliotville
           stand_in = "Lhasa"
           locale = "Elliotville"
