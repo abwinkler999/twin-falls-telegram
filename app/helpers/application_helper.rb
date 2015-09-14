@@ -5,7 +5,7 @@ module ApplicationHelper
       location = [:barmouth_light, :elliotville, :twin_falls, :samshire, :spencerville, :bright_plain, :witch_haven, :maen_hir, :powdermill_road, :gravel_barrens, :weeping_hill, :flower_hill].sample
   		case location
 		  when :barmouth_light
-		    stand_in = "Plymouth"
+		    stand_in = "Argentia"
 		    locale = "Barmouth Light"
   		  when :elliotville
           stand_in = "Lhasa"
@@ -43,9 +43,10 @@ module ApplicationHelper
   		end
       response = HTTParty.get('http://api.openweathermap.org/data/2.5/weather?q=' + stand_in)
       json = JSON.parse(response.body)
-  		{temp: kelvin_to_fahrenheit(json["main"]["temp"]),
+			icon = json["weather"][0]["icon"]
+  		{temp: kelvin_to_fahrenheit(json["main"]["temp"]).round.to_s,
         conditions: json["weather"][0]["description"],
-        icon: json["weather"][0]["icon"],
+				icon_url: "http://openweathermap.org/img/w/" + icon + ".png",
         location: locale
       }
   	end
