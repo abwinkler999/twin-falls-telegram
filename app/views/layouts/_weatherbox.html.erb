@@ -1,17 +1,15 @@
-<div id="weatherbox">
-	<p><h3><strong>Current Weather Conditions</strong></h3></p>
-	<% weather_conditions = pull_weather %>
-	<% current_temp = weather_conditions[:temp].round.to_s %>
-	<% icon_url = "http://openweathermap.org/img/w/" + weather_conditions[:icon] + ".png" %>
-	<p><h2><%=weather_conditions[:location]%></h2></p>
+<p><h3><strong>Current Weather Conditions</strong></h3></p>
+<% weather_conditions = pull_weather %>
+<% current_temp = weather_conditions[:temp].round.to_s %>
+<% icon_url = "http://openweathermap.org/img/w/" + weather_conditions[:icon] + ".png" %>
+<p><h2><%=weather_conditions[:location]%></h2></p>
 
-	<div id="weather_container">
-		<div id="weather_display">
-			<h1><%= current_temp %>°</h1>
-			<p><h2><%=weather_conditions[:conditions] %></h2></p>
-		</div>
-		<div id="weather_icon">
-			<%= image_tag(icon_url) %>
-		</div>
+<div id="weather_container">
+	<div id="weather_display">
+		<h1><%= current_temp %>°</h1>
+		<p><h2><%=weather_conditions[:conditions] %></h2></p>
+	</div>
+	<div id="weather_icon">
+		<%= image_tag(icon_url) %>
 	</div>
 </div>
