@@ -1,0 +1,45 @@
+barmouth_light:
+  stand_in: "Argentia"
+  locale: "Barmouth Light"
+elliotville:
+  stand_in: "Lhasa"
+  locale: "Elliotville"
+twin_falls:
+  stand_in: "Aspen"
+  locale: "Twin Falls"
+samshire:
+  stand_in: "Salisbury"
+  locale: "Samshire"
+spencerville:
+  stand_in: "Shreveport"
+  locale: "Spencerville"
+bright_plain:
+  stand_in: "Topeka"
+  locale: "Bright Plain"
+witch_haven:
+  stand_in: "Miami"
+  locale: "Witch Haven"
+maen_hir:
+  stand_in: "Grimsby"
+  locale: "Maen Hir"
+powdermill_road:
+  stand_in: "Luverne"
+  locale: "Powdermill Road"
+gravel_barrens:
+  stand_in: "Waldport"
+  locale: "Gravel Barrens"
+weeping_hill:
+  stand_in: "Basalt"
+  locale: "Weeping Hill"
+flower_hill:
+  stand_in: "Chambersburg"
+  locale: "Flower Hill"
+sunflower_creek:
+  stand_in: "Memphis"
+  locale: "Sunflower Creek"
+horse_hill:
+  stand_in: "Salzburg"
+  locale: "Horse Hill"
+arkham:
+  stand_in: "Louisville"
+  locale: "Arkham"
