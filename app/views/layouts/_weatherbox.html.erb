@@ -1,9 +1,6 @@
 <% weather_assortment = Array.new %>
 <% 3.times { weather_assortment << pull_weather } %>
 <% weather_assortment.uniq! %>
-<% weather_conditions = weather_assortment[0] %>
-<% current_temp = weather_conditions[:temp] %>
-<% icon_url = weather_conditions[:icon_url] %>
 <div id="weather_container">
 	<div id="weather_display">
 <% weather_assortment.each { |city| %>
