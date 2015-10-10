@@ -5,7 +5,8 @@ module ApplicationHelper
 			random_location = WEATHER_CITIES.keys.sample
 			locale = WEATHER_CITIES[random_location]["locale"]
 			stand_in = WEATHER_CITIES[random_location]["stand_in"]
-      response = HTTParty.get('http://api.openweathermap.org/data/2.5/weather?q=' + stand_in)
+			request_url = "http://api.openweathermap.org/data/2.5/weather?q=#{stand_in}&APPID=#{WEATHER_API}"
+      response = HTTParty.get(request_url)
       json = JSON.parse(response.body)
 			icon = json["weather"][0]["icon"]
   		{temp: kelvin_to_fahrenheit(json["main"]["temp"]).round.to_s,
