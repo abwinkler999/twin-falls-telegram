@@ -1,0 +1,8 @@
+- random_weather_locations = WEATHER_CITIES.keys.sample(4)
+- random_weather_locations.each do |city|
+	- local_weather_data = pull_weather(WEATHER_CITIES[city]["stand_in"])
+	%p
+		= WEATHER_CITIES[city]["locale"]
+		= local_weather_data[:temp].to_s + "°"
+		= local_weather_data[:conditions]
+		= image_tag(local_weather_data[:icon_url])
