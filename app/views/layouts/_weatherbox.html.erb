@@ -1,13 +1,12 @@
-<% weather_assortment = Array.new %>
-<% 3.times { weather_assortment << pull_weather } %>
-<% weather_assortment.uniq! %>
+<% random_weather_locations = WEATHER_CITIES.keys.sample(3) %>
 <div id="weather_container">
 	<div id="weather_display">
-<% weather_assortment.each { |city| %>
-<h4><%= city[:location]%></h4>
-		<%= city[:temp] %>°
-				<%= city[:conditions] %>
-						<%= image_tag(city[:icon_url]) %>
-<% } %>
-</div>
+	<% random_weather_locations.each { |city| %>
+		<% local_weather_data = pull_weather(WEATHER_CITIES[city]["stand_in"]) %>
+	<h4><%= WEATHER_CITIES[city]["locale"]%></h4>
+			<%= local_weather_data[:temp] %>°
+					<%= local_weather_data[:conditions] %>
+							<%= image_tag(local_weather_data[:icon_url]) %>
+	<% } %>
+	</div>
 </div>
