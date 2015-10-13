@@ -1,7 +1,5 @@
-body.paper_background{
+.paper_background{
 	background: url(paper.jpg);
-	#color:#444444;
-	#color:#333333;
 }
 
 a{
@@ -18,7 +16,7 @@ a{
 	#border-radius:5px;
 	font-family:'Sancreek', Georgia, Serif;
 	#font-variant: small-caps;
-	text-shadow:2px 2px 4px #000000;
+	#text-shadow:2px 2px 4px #000000;
 	#position:relative;
 	#height:240px;
 	border: solid 2px;

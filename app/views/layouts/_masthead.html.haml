@@ -1,0 +1,23 @@
+.col-md-2#sidebar
+	=render "layouts/sidebar"
+
+.col-md-7
+	#centerblock
+		#paper_name
+			%p
+				%h1= link_to "Twin Falls Telegram", root_path
+				%h2= link_to "Serving Twin Falls and the Grey Mountains", root_path
+
+		#login_area
+			- if user_signed_in?
+				- if current_user.is_an_editor?
+					%span.bubble_button= link_to "POST NEW ARTICLE", new_article_path
+				= "Welcome, #{current_user.name} | "
+				%span.bubble_button= link_to "LOG OUT", destroy_user_session_path, method: :delete
+				%span.bubble_button= link_to "D&D GAME", discussion_threads_path
+			- else
+				= "Welcome, Guest User | "
+				%span.bubble_button= link_to "LOG IN", new_user_session_path
+
+.col-md-3#weatherbox
+	= render "layouts/weatherbox"

@@ -1,0 +1,31 @@
+!!! html
+%html
+  %head
+    %title Twin Falls Telegram
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = auto_discovery_link_tag(:rss, "http://twinfalls.abwinkler.com")
+    = csrf_meta_tags
+    %link{href: 'http://fonts.googleapis.com/css?family=Sancreek', rel:'stylesheet', type:'text/css'}
+    %link{href: 'http://fonts.googleapis.com/css?family=Inconsolata', rel:'stylesheet', type:'text/css'}
+  %body.paper_background
+    .container-fluid
+      .row#masthead
+        = render "layouts/masthead"
+      .row#flash
+        - if notice
+          %p.notice= notice
+        - if alert
+          %p.alert= alert
+      .row#articles
+        .col-md-2
+          .row
+            #subway
+              = link_to (image_tag "subway_thumbnail.png", size: "200x100", id: "thumbnail"), subway_path
+              %p
+                Minecraft Municipal Railway Co.
+                %br
+                Official Route Map
+          .row
+            = render "layouts/personals"
+        = yield
